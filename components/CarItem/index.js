@@ -3,23 +3,25 @@ import React from "react";
 import styles from "./styles";
 import StyledButton from "../StyledButton";
 
-const CarItem = () => {
+const CarItem = ({ name, tagLine, image, tagLineCTA }) => {
   return (
     <View style={styles.carContainer}>
-      <ImageBackground
-        source={require("../../assets/images/ModelX.jpeg")}
-        style={styles.image}
-      />
+      <ImageBackground source={image} style={styles.image} />
       <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subtitle}>Starting at $69,420</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subtitle}>
+          {tagLine}&nbsp;
+          <Text style={styles.subtitleCTA}>{tagLineCTA}</Text>
+        </Text>
       </View>
-      <StyledButton type="primary" text={"Custom Order"} onPress={() => {}} />
-      <StyledButton
-        type="secondary"
-        text={"Existing Inventory"}
-        onPress={() => {}}
-      />
+      <View style={styles.buttonContainer}>
+        <StyledButton type="primary" text={"Custom Order"} onPress={() => {}} />
+        <StyledButton
+          type="secondary"
+          text={"Existing Inventory"}
+          onPress={() => {}}
+        />
+      </View>
     </View>
   );
 };

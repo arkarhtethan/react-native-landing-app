@@ -18,11 +18,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#5c5e62",
   },
+  subtitleCTA: {
+    textDecorationLine: "underline",
+    marginLeft: 30,
+  },
   image: {
     width: "100%",
     height: "100%",
     resizeMode: "cover",
     position: "absolute",
+  },
+  buttonContainer: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    marginBottom: 50,
   },
 });
 
